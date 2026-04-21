@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/home.css">
 </head>
+
 <body>
     <!-- Desktop Header -->
     <header class="desktop-header">
@@ -14,8 +16,8 @@
             <div class="header-top">
                 <div class="logo-container">
                     <!-- Two logos side by side -->
-                    <div class="logo"> 
-                        <img src="img/logo.jpeg" alt="FIRS Logo" onclick="window.location.href='home.html' ">   
+                    <div class="logo">
+                        <img src="img/logo.jpeg" alt="FIRS Logo" onclick="window.location.href='home.html' ">
                     </div>
                 </div>
                 <div class="header-right">
@@ -92,8 +94,8 @@
     <header class="mobile-header">
         <div class="mobile-top">
             <div class="logo-container">
-                <div class="logo"> 
-                    <img src="img/logo.jpeg" alt="FIRS Logo">   
+                <div class="logo">
+                    <img src="img/logo.jpeg" alt="FIRS Logo">
                 </div>
             </div>
             <div class="header-right">
@@ -112,7 +114,8 @@
     <div class="mobile-menu-bar">
         <div class="container">
             <button class="menu-toggle">
-                <i class="fas fa-bars"></i> <p style="font-family: 'Roboto', Arial, sans-serif; padding-left: 10px;">Menu</p>
+                <i class="fas fa-bars"></i>
+                <p style="font-family: 'Roboto', Arial, sans-serif; padding-left: 10px;">Menu</p>
             </button>
         </div>
     </div>
@@ -158,7 +161,8 @@
     <div class="marquee-container">
         <div class="marquee">
             <div class="marquee-content">
-                <strong>Latest Updates:</strong> Tax Filing Deadline Extended to April 30th • New e-Invoicing System Now Available • VAT Rate Update Effective Next Quarter
+                <strong>Latest Updates:</strong> Tax Filing Deadline Extended to April 30th • New e-Invoicing System Now
+                Available • VAT Rate Update Effective Next Quarter
             </div>
         </div>
     </div>
@@ -178,7 +182,7 @@
                     <p>Check the status of your current tax filings and see upcoming deadlines.</p>
                     <a href="#" class="btn btn-primary">View Status</a>
                 </div>
-                
+
                 <div class="dashboard-card">
                     <div class="card-icon">
                         <i class="fas fa-receipt"></i>
@@ -187,7 +191,7 @@
                     <p>Review your payment history and download receipts for previous transactions.</p>
                     <a href="#" class="btn btn-primary">View History</a>
                 </div>
-                
+
                 <div class="dashboard-card">
                     <div class="card-icon">
                         <i class="fas fa-chart-line"></i>
@@ -208,7 +212,7 @@
                     <h4>File Tax Return</h4>
                     <a href="#" class="btn btn-outline">Start Filing</a>
                 </div>
-                
+
                 <div class="action-item">
                     <div class="action-icon">
                         <i class="fas fa-credit-card"></i>
@@ -216,7 +220,7 @@
                     <h4>Make Payment</h4>
                     <a href="#" class="btn btn-outline">Pay Now</a>
                 </div>
-                
+
                 <div class="action-item">
                     <div class="action-icon">
                         <i class="fas fa-download"></i>
@@ -224,7 +228,7 @@
                     <h4>Download Certificate</h4>
                     <a href="#" class="btn btn-outline">Download</a>
                 </div>
-                
+
                 <div class="action-item">
                     <div class="action-icon">
                         <i class="fas fa-question-circle"></i>
@@ -251,7 +255,7 @@
                     </div>
                     <div class="activity-time">2 days ago</div>
                 </div>
-                
+
                 <div class="activity-item">
                     <div class="activity-icon">
                         <i class="fas fa-check-circle"></i>
@@ -262,7 +266,7 @@
                     </div>
                     <div class="activity-time">1 week ago</div>
                 </div>
-                
+
                 <div class="activity-item">
                     <div class="activity-icon">
                         <i class="fas fa-certificate"></i>
@@ -283,7 +287,8 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>About FIRS</h3>
-                    <p>The Federal Inland Revenue Service is the Nigerian government agency responsible for assessing, collecting, and accounting for tax and other revenues accruing to the Federal Government.</p>
+                    <p>The Federal Inland Revenue Service is the Nigerian government agency responsible for assessing,
+                        collecting, and accounting for tax and other revenues accruing to the Federal Government.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -368,7 +373,7 @@
             closeMenu.addEventListener('click', closeMenuFunc);
 
             // Close on outside click
-            document.addEventListener('click', function(e) {
+            document.addEventListener('click', function (e) {
                 if (!mobileNav.contains(e.target) && !menuToggle.contains(e.target)) {
                     closeMenuFunc();
                 }
@@ -377,11 +382,11 @@
             // Add animation on scroll
             const animateOnScroll = () => {
                 const elements = document.querySelectorAll('.dashboard-card, .action-item');
-                
+
                 elements.forEach(element => {
                     const elementPosition = element.getBoundingClientRect().top;
                     const screenPosition = window.innerHeight / 1.2;
-                    
+
                     if (elementPosition < screenPosition) {
                         element.style.opacity = '1';
                         element.style.transform = 'translateY(0)';
@@ -412,7 +417,7 @@
                 document.getElementById('mobileUserName').textContent = userDetails.name;
                 document.getElementById('navUserName').textContent = userDetails.name;
                 document.getElementById('welcomeMessage').textContent = `Welcome back, ${userDetails.name} to your tax portal!`;
-                
+
                 // Update user avatar with first letter of name
                 const userAvatar = document.getElementById('userAvatar');
                 if (userAvatar && userDetails.name) {
@@ -432,12 +437,27 @@
         // Function to handle logout
         function logout(e) {
             if (e) e.preventDefault();
-            
+
             // Clear user data from localStorage
             localStorage.removeItem("userDetails");
             // Redirect to login page
             window.location.href = "login.html";
         }
     </script>
+
+    <!-- Watermark overlay -->
+    <div id="watermark">
+        TESTING SITE - NOT OFFICIAL
+    </div>
+
+    <!-- Marquee banner at bottom -->
+    <div id="marquee-banner">
+        <div class="marquee-content">
+            <span>⚠️ THIS IS A TESTING SITE - NOT AN OFFICIAL CAC PORTAL ⚠️</span>
+            <span>⚠️ THIS IS A TESTING SITE - NOT AN OFFICIAL CAC PORTAL ⚠️</span>
+            <span>⚠️ THIS IS A TESTING SITE - NOT AN OFFICIAL CAC PORTAL ⚠️</span>
+        </div>
+    </div>
 </body>
+
 </html>

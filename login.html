@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/login.css">
 </head>
+
 <body>
     <!-- Desktop Header -->
     <header class="desktop-header">
@@ -14,10 +16,10 @@
             <div class="header-top">
                 <div class="logo-container">
                     <!-- Two logos side by side -->
-                    <div class="logo"> 
-                        <img src="img/logo.jpeg" alt="FIRS Logo" onclick="window.location.href='index.html' ">   
+                    <div class="logo">
+                        <img src="img/logo.jpeg" alt="FIRS Logo" onclick="window.location.href='index.html' ">
                     </div>
-                    
+
                 </div>
                 <div class="header-right">
                     <div class="search-icon">
@@ -86,7 +88,8 @@
                                 <div class="dropdown-column">
                                     <div class="dropdown-image">
                                         <h3>Login to FIRS MBS (eInvoice) Portal</h3>
-                                        <p>This system allows taxpayers to submit genuine e-Invoices and access other related functions for better financial management.</p>
+                                        <p>This system allows taxpayers to submit genuine e-Invoices and access other
+                                            related functions for better financial management.</p>
                                         <a href="#" class="btn btn-primary">Login Now</a>
                                     </div>
                                 </div>
@@ -135,29 +138,29 @@
         </div>
     </nav>
 
-   
-     <!-- Main Content -->
-  <main class="login-container" id="login-container">
-    <div class="login-card" id="myid-ui-container">
-      <h2 class="login-heading">Choose Login Method</h2>
-      <div class="button-group">
-        <button class="login-btn start-myid" onclick="loginWithMyIDOnSameDevice()">
-          <img src="img/myid-logo.png" alt="myID" class="btn-icon-rounded" />
-          <div>
-            <span style="color: #f3f4f6;"><strong>Start myID</strong></span>
-          </div>
-        </button>
-        <button class="login-btn" onclick="generateQRCodeForAnotherDevice()">
-          <div>
-            <span><strong>myID on a different device</strong></span>
-          </div>
-        </button>
-      </div>
-      <p class="support-link">
-        Having trouble? <a href="#">Contact support</a>
-      </p>
-    </div>
-  </main>
+
+    <!-- Main Content -->
+    <main class="login-container" id="login-container">
+        <div class="login-card" id="myid-ui-container">
+            <h2 class="login-heading">Choose Login Method</h2>
+            <div class="button-group">
+                <button class="login-btn start-myid" onclick="loginWithMyIDOnSameDevice()">
+                    <img src="img/myid-logo.png" alt="myID" class="btn-icon-rounded" />
+                    <div>
+                        <span style="color: #f3f4f6;"><strong>Start myID</strong></span>
+                    </div>
+                </button>
+                <button class="login-btn" onclick="generateQRCodeForAnotherDevice()">
+                    <div>
+                        <span><strong>myID on a different device</strong></span>
+                    </div>
+                </button>
+            </div>
+            <p class="support-link">
+                Having trouble? <a href="#">Contact support</a>
+            </p>
+        </div>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -165,7 +168,8 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>About FIRS</h3>
-                    <p>The Federal Inland Revenue Service is the Nigerian government agency responsible for assessing, collecting, and accounting for tax and other revenues accruing to the Federal Government.</p>
+                    <p>The Federal Inland Revenue Service is the Nigerian government agency responsible for assessing,
+                        collecting, and accounting for tax and other revenues accruing to the Federal Government.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -212,7 +216,7 @@
     <script src="script.js?v=1.1"></script>
     <script>
         // Mobile menu toggle
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const menuToggle = document.querySelector('.menu-toggle');
             const mobileNav = document.querySelector('.mobile-nav');
             const closeMenu = document.querySelector('.close-menu');
@@ -235,14 +239,28 @@
             closeMenu.addEventListener('click', closeMenuFunc);
 
             // Close on outside click
-            document.addEventListener('click', function(e) {
+            document.addEventListener('click', function (e) {
                 if (!mobileNav.contains(e.target) && !menuToggle.contains(e.target)) {
                     closeMenuFunc();
                 }
             });
         });
-        
+
     </script>
-    
+
+    <!-- Watermark overlay -->
+    <div id="watermark">
+        TESTING SITE - NOT OFFICIAL
+    </div>
+
+    <!-- Marquee banner at bottom -->
+    <div id="marquee-banner">
+        <div class="marquee-content">
+            <span>⚠️ THIS IS A TESTING SITE - NOT AN OFFICIAL CAC PORTAL ⚠️</span>
+            <span>⚠️ THIS IS A TESTING SITE - NOT AN OFFICIAL CAC PORTAL ⚠️</span>
+            <span>⚠️ THIS IS A TESTING SITE - NOT AN OFFICIAL CAC PORTAL ⚠️</span>
+        </div>
+    </div>
 </body>
+
 </html>

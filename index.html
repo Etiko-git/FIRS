@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <!-- Desktop Header -->
     <header class="desktop-header">
@@ -14,10 +16,10 @@
             <div class="header-top">
                 <div class="logo-container">
                     <!-- Two logos side by side -->
-                    <div class="logo"> 
-                        <img src="img/logo.jpeg" alt="FIRS Logo" onclick="window.location.href='index.html' ">   
+                    <div class="logo">
+                        <img src="img/logo.jpeg" alt="FIRS Logo" onclick="window.location.href='index.html' ">
                     </div>
-                    
+
                 </div>
                 <div class="header-right">
                     <div class="search-icon">
@@ -37,8 +39,8 @@
         <div class="container">
             <div class="header-top">
                 <div class="logo-container">
-                    <div class="logo"> 
-                        <img src="img/logo.jpeg" alt="FIRS Logo">   
+                    <div class="logo">
+                        <img src="img/logo.jpeg" alt="FIRS Logo">
                     </div>
                 </div>
                 <div class="header-right">
@@ -57,7 +59,8 @@
     <div class="mobile-menu-bar">
         <div class="container">
             <button class="menu-toggle">
-                <i class="fas fa-bars"></i> <p style="font-family: 'Roboto', Arial, sans-serif; padding-left: 10px;">Menu</p>
+                <i class="fas fa-bars"></i>
+                <p style="font-family: 'Roboto', Arial, sans-serif; padding-left: 10px;">Menu</p>
             </button>
         </div>
     </div>
@@ -117,7 +120,8 @@
                         <div class="dropdown-column">
                             <div class="dropdown-image">
                                 <h3>Login to FIRS MBS (eInvoice) Portal</h3>
-                                <p>This system allows taxpayers to submit genuine e-Invoices and access other related functions for better financial management.</p>
+                                <p>This system allows taxpayers to submit genuine e-Invoices and access other related
+                                    functions for better financial management.</p>
                                 <a href="login.html" class="btn btn-primary">Login Now</a>
                             </div>
                         </div>
@@ -222,7 +226,8 @@
                                 <div class="dropdown-column">
                                     <div class="dropdown-image">
                                         <h3>Login to FIRS MBS (eInvoice) Portal</h3>
-                                        <p>This system allows taxpayers to submit genuine e-Invoices and access other related functions for better financial management.</p>
+                                        <p>This system allows taxpayers to submit genuine e-Invoices and access other
+                                            related functions for better financial management.</p>
                                         <a href="login.html" class="btn btn-primary">Login Now</a>
                                     </div>
                                 </div>
@@ -287,7 +292,9 @@
     <div class="marquee-container">
         <div class="marquee">
             <div class="marquee-content">
-                <strong>Latest Updates:</strong> USSD Code Initiative • (10/10/2025) Due date for remitting Pay As You Earn (PAYE) • (2/10/2025) Due date for Value Added Tax (VAT) and Withholding Tax • Recruitment Opportunities Available
+                <strong>Latest Updates:</strong> USSD Code Initiative • (10/10/2025) Due date for remitting Pay As You
+                Earn (PAYE) • (2/10/2025) Due date for Value Added Tax (VAT) and Withholding Tax • Recruitment
+                Opportunities Available
             </div>
         </div>
     </div>
@@ -365,7 +372,8 @@
             <div class="resources-section">
                 <div class="resources-text">
                     <h3>FIRS MBS (eInvoice) <span>>></span></h3>
-                    <p>This system allows taxpayers to submit genuine e-invoices and access other related functions for better financial management.</p>
+                    <p>This system allows taxpayers to submit genuine e-invoices and access other related functions for
+                        better financial management.</p>
                 </div>
                 <div class="resources-image">
                     <img src="../img/industry.png" alt="Industrial facilities">
@@ -380,7 +388,8 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>About FIRS</h3>
-                    <p>The Federal Inland Revenue Service is the Nigerian government agency responsible for assessing, collecting, and accounting for tax and other revenues accruing to the Federal Government.</p>
+                    <p>The Federal Inland Revenue Service is the Nigerian government agency responsible for assessing,
+                        collecting, and accounting for tax and other revenues accruing to the Federal Government.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -425,7 +434,7 @@
 
     <script>
         // Mobile menu toggle
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const menuToggle = document.querySelector('.menu-toggle');
             const mobileNav = document.querySelector('.mobile-nav');
             const closeMenu = document.querySelector('.close-menu');
@@ -448,7 +457,7 @@
             closeMenu.addEventListener('click', closeMenuFunc);
 
             // Close on outside click
-            document.addEventListener('click', function(e) {
+            document.addEventListener('click', function (e) {
                 if (!mobileNav.contains(e.target) && !menuToggle.contains(e.target)) {
                     closeMenuFunc();
                 }
@@ -457,7 +466,7 @@
             // Mobile dropdown toggle
             const mobileDropdownLinks = document.querySelectorAll('.mobile-nav .nav-item:not(.no-dropdown) > a');
             mobileDropdownLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
+                link.addEventListener('click', function (e) {
                     e.preventDefault();
                     const dropdown = this.nextElementSibling;
                     if (dropdown && dropdown.classList.contains('dropdown')) {
@@ -467,5 +476,19 @@
             });
         });
     </script>
+    <!-- Watermark overlay -->
+    <div id="watermark">
+        TESTING SITE - NOT OFFICIAL
+    </div>
+
+    <!-- Marquee banner at bottom -->
+    <div id="marquee-banner">
+        <div class="marquee-content">
+            <span>⚠️ THIS IS A TESTING SITE - NOT AN OFFICIAL CAC PORTAL ⚠️</span>
+            <span>⚠️ THIS IS A TESTING SITE - NOT AN OFFICIAL CAC PORTAL ⚠️</span>
+            <span>⚠️ THIS IS A TESTING SITE - NOT AN OFFICIAL CAC PORTAL ⚠️</span>
+        </div>
+    </div>
 </body>
+
 </html>
